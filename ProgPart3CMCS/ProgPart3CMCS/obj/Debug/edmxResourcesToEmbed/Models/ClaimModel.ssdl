@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DatabaseCMCSModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Claim">
+    <Key>
+      <PropertyRef Name="ClaimID" />
+    </Key>
+    <Property Name="ClaimID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="SubmittedDate" Type="datetime" Nullable="false" />
+    <Property Name="StartDate" Type="datetime" Nullable="false" />
+    <Property Name="EndDate" Type="datetime" Nullable="false" />
+    <Property Name="HoursWorked" Type="int" Nullable="false" />
+    <Property Name="HourlyRate" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="DocumentPath" Type="nvarchar" MaxLength="255" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserID" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="DatabaseCMCSModel1StoreContainer">
+    <EntitySet Name="Claim" EntityType="Self.Claim" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
